@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SF Pro Display', sans-serif;
+} 
+
+#firstPage{
+  background-image: url(bg.svg);
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.navbar{
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background: transparent;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+.logo img{
+  height: 60px;
+}
+
+.navbar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.navbar ul li{
+  margin: 0 5px;
+}
+.navbar ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+.navbar .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  .navbar{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  .navbar .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .navbar ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #061941;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  .navbar ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  .navbar ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  .navbar ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+.content h1{
+  width: 876px;
+  height: 190px;
+  text-align: left;
+  margin-left: 2vw;
+  margin-top: 20vh;
+  font-weight: 500;
+  font-size: 4vw;
+  line-height: 95px;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+.content h3{
+  width: 863px;
+  height: 210px;
+  margin-left: 156px;
+  margin-top: 41px;
+  font-weight: 400;
+  font-size: 3vw;
+  line-height: 60px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+}
