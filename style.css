@@ -6,11 +6,11 @@
 } 
 
 #firstPage{
-  background-image: url(bg.svg);
+  background-image: url(bg1.svg);
   position: relative;
-  height: 100vh;
-  background-size: cover;
+  background-size: 100%;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .navbar{
@@ -130,4 +130,12 @@ input[type="checkbox"]{
   line-height: 60px;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.5);
+}
+
+#aboutPage{
+  background-image: url(bg2.svg);
+  position: relative;
+  
+  background-size: cover;
+  background-position: center center;
 }
